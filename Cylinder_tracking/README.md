@@ -28,7 +28,7 @@ ffmpeg -version
 | `training-datasets/iteration-0/UnaugmentedDataSet_Cylinder_Tracking_Single_AnimalAug8/` | `CollectedData_OF.csv` and `.h5` contain labels. `Cylinder_Tracking_Single_Animal_OF95shuffle1.mat` and `Documentation_data-Cylinder_Tracking_Single_Animal_95shuffle1.pickle` are DLC dataset artifacts. `metadata.yaml` registers the shuffle and engine. |
 | `dlc-models-pytorch/iteration-0/Cylinder_Tracking_Single_AnimalAug8-trainset95shuffle1/` | `train/` holds the PyTorch config, trained weights, dated log, and metric CSVs. `test/pose_cfg.yaml` records HRNet-W32, the two joints, and global scale 1. |
 
-Supply the raw videos separately. The archive also lacks the labeled frame images referenced by the dataset and any processed videos, inference CSVs, or trajectory outputs. The notebooks cover inference and downstream processing. Reproducing the training run also requires the labeled frames and the original pretrained weights or their equivalents.
+The notebooks cover inference and downstream processing. 
 
 ## Running the notebooks
 
@@ -75,7 +75,6 @@ The archived config sets automatic device selection, zero data-loader workers an
 
 ## Saved checkpoints and evaluation
 
-The training directory contains nine `.pt` files. DLC's `best` filenames mark the checkpoints selected by the respective training metrics.
 
 | Stage | Retained checkpoints | Logged test metrics for best checkpoint |
 | --- | --- | --- |
